@@ -1,0 +1,22 @@
+@use 'reset';
+@use 'vars';
+
+@font-face {
+  font-family: 'Machina';
+  src: url('../assets/fonts/NeueMachina-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Machina';
+  font-weight: bold;
+  src: url('../assets/fonts/NeueMachina-Ultrabold.otf') format('opentype');
+}
+
+body {
+  font-family: 'Machina', sans-serif;
+  overflow-x: hidden;
+}
+
+.no-scroll {
+  overflow: hidden;
+}

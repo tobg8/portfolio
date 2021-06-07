@@ -6,16 +6,19 @@
   height: 10%;
   transform: translateY(0px);
   z-index: 2;
-  background-color: rgb(255, 255, 255, 0.5);
+  background-color: #6C9A8B;
   display: flex;
   border-bottom: 2px solid black;
-  
+  animation: slide 1.5s ease forwards;
+
   &--close {
     display: none;
   }
   &--false {
     transform: translateY(0px);
     animation: slide 1.5s ease forwards;
+    opacity: .9;
+    // background-color:rgb(123, 86, 124);
   }
   &__in-out {
     width: 15%;
@@ -63,7 +66,7 @@
 @keyframes slideBack {
   50% {
     transform: translateY(-100px);
-    
+
   }
   100% {
     z-index: 0;

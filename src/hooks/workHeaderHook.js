@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 
 const GrowElementOnScroll = (options) => {
-  const textRef = useRef(null);
-  const [inView, setinView] = useState(false);
+  const workReference = useRef(null);
+  const [isSeen, setIsSeen] = useState(false);
 
   const callbackFunction = (entries) => {
     const [entry] = entries;
@@ -10,22 +10,22 @@ const GrowElementOnScroll = (options) => {
     if (entry.isIntersecting === false) {
       return;
     }
-    setinView(entry.isIntersecting);
+    setIsSeen(entry.isIntersecting);
   };
 
   useEffect(() => {
-    const currentRef = textRef.current;
+    const currentRef = workReference.current;
     const observer = new IntersectionObserver(callbackFunction, options);
 
-    if (textRef.current) {
-      observer.observe(textRef.current);
+    if (workReference.current) {
+      observer.observe(workReference.current);
     }
     return () => {
       if (currentRef) observer.unobserve(currentRef);
     };
-  }, [textRef, options]);
+  }, [workReference, options]);
 
-  return [textRef, inView];
+  return [workReference, isSeen];
 };
 
 export default GrowElementOnScroll;

@@ -1,0 +1,50 @@
+.work {
+  border: 2px solid black;
+  width: 100%;
+  height: 33vh;
+  border-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+  &__infos {
+    font-size: 1.1em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    justify-content: space-around;
+    margin-left: 1em;
+    &--modifier {
+      font-weight: normal;
+      font-size: .9em;
+      width: 100%;
+      text-overflow: clip;
+      white-space:unset;
+    }
+  }
+  &__links {
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  &__github {
+    width: 30px;
+    margin-bottom: .4em;
+    margin-left: .8em;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+  &__links-container {
+    display: flex;
+    height: 50%;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__learn-more {
+    margin-right: .5em;
+  }
+}

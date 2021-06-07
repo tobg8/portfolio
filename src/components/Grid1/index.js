@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './styles.scss';
-
+import PropTypes from 'prop-types';
 import Header from 'src/components/Header';
 import headerRefHook from 'src/hooks/headerRefHook';
 import hamburger1 from '../../assets/images/hamburger1.svg';
 
-const Grid1 = () => {
+const Grid1 = ({
+  scroll,
+  scrollWork,
+}) => {
   const [navbar, setNavbar] = useState(false);
 
   const [headerRef, inView] = headerRefHook({
@@ -23,7 +26,7 @@ const Grid1 = () => {
 
   return (
     <div className="grid1">
-      <Header navbar={navbar} setNavbar={setNavbar} modifier="modifier" inView={inView} className="false" />
+      <Header navbar={navbar} setNavbar={setNavbar} modifier="modifier" inView={inView} className="false" scroll={scroll} scrollWork={scrollWork} />
       <div className="grid1__ellipse" />
       <div className="grid1__name">
         <p className="grid1__name--content">Theo Beloeil</p>
@@ -32,6 +35,9 @@ const Grid1 = () => {
         <img className="grid1__hamburger-svg" src={hamburger1} alt="" onClick={() => setNavbar(true)} />
       </div>
       <div className="grid1__title-1">
+        <img className="grid1__title-1--svg" src="https://static.tildacdn.com/tild3935-3565-4537-a538-333935346532/web_designer.svg" alt="bar code" />
+        <p className="grid1__title-1--initial">t</p>
+        <div className="grid1__title-1--color" />
         <p className="grid1__title-1--content">Unique &</p>
       </div>
       <div className="grid1__title-2">
@@ -52,4 +58,12 @@ const Grid1 = () => {
   );
 };
 
+Grid1.propTypes = {
+  scroll: PropTypes.func,
+  scrollWork: PropTypes.func.isRequired,
+};
+
+Grid1.defaultProps = {
+  scroll: null,
+};
 export default Grid1;

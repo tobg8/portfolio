@@ -41,30 +41,57 @@
     }
   }
   &__title-1 {
-    
     grid-area: title1;
     font-weight: bold;
     font-size: 2.8em;
     display: flex;
-    align-items: flex-end;
+    // align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
     padding-left: .2em;
     border: 2px solid black;
     border-top: 0;
     padding-bottom: .2em;
     background-color: white;
     text-transform: uppercase;
+    position: relative;
+    &--initial {
+      position: absolute;
+      top: -2px;
+      left: 10px;
+      text-transform: lowercase;
+      animation: rotation 1s forwards;
+    }
+    &--color {
+      width: 60%;
+      position: absolute;
+      height: 20%;
+      top: 35%;
+      background-color: black;
+      opacity: .6;
+    }
+    &--svg {
+      top: 0;
+      right: 10px;
+      position: absolute;
+      width: 40%;
+      height: 30%;
+      max-height: 43px;
+      max-width: 120px;
+      align-self: center;
+    }
     &--content {
       opacity: 0;
       animation: slideShow 1s 500ms forwards;
     }
   }
   &__title-2 {
-    
+
     grid-area: title2;
     display: flex;
     font-size: 2.8em;
     font-weight: bold;
-    padding-left: .2em;
+    padding-left: .15 em;
     align-items: center;
     border: 2px solid black;
     border-top: 0;
@@ -75,7 +102,7 @@
     }
   }
   &__title-3 {
-    
+
     grid-area: title3;
     border: 2px solid black;
     border-top: 0;
@@ -134,13 +161,13 @@
     z-index: 1;
     background: linear-gradient(90deg, black 35%, rgba( 0, 0, 0, 0.6) 75%);
     animation: download .5s infinite;
-    
+
   }
   display: grid;
   height: 100%;
   grid-template-columns: 15% 50% 20% 15%;
   grid-template-rows: 10% 20% 15% 55%;
-  grid-template-areas: 
+  grid-template-areas:
   ". name hamburger ."
   ". title1 title1 ."
   ". title2 title2 ."
@@ -150,7 +177,7 @@
 @keyframes download {
  0% {
   background: linear-gradient(90deg, black 35%, rgba( 0, 0, 0, 0.6) 75%);
- } 
+ }
  25% {
   background: linear-gradient(70deg, black 35%, rgba( 0, 0, 0, 0.6) 75%);
  }
@@ -176,6 +203,15 @@
   100% {
     transform: translateY(0px);
     opacity: 1;
-    
+
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

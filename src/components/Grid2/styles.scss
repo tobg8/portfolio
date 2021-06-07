@@ -12,11 +12,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    opacity: .4;
+    border-end-end-radius: 50px;
+    border-end-start-radius: 50px;
+    opacity: .3;
     z-index: 1;
     width: 100%;
     box-sizing: content-box;
-    height: 100%;
+    height: 90%;
     background-image: url(../../assets/images/ellipse.webp);
     background-repeat: no-repeat;
     background-position: 30% 30%;
@@ -33,9 +35,10 @@
   &__text {
     opacity: 0;
     width: 90%;
-    line-height: 1.5;
+    line-height: 1.8;
     &--modifier {
-      animation: slideShow 1s 500ms forwards;
+      animation: slideShow 1s 200ms forwards;
+      line-height: 1.8;
     }
   }
   &__ref {
@@ -63,14 +66,16 @@
     height: auto;
     display: flex;
     justify-content: center;
+    z-index: 1;
+    cursor: pointer;
     &--modifier1 {
-      animation: slideShow 1s 300ms forwards;
+      animation: slideShow 1s 100ms forwards;
     }
     &--modifier2 {
-      animation: slideShow 1s 500ms forwards;
+      animation: slideShow 1s 300ms forwards;
     }
     &--modifier3 {
-      animation: slideShow 1s 700ms forwards;
+      animation: slideShow 1s 500ms forwards;
     }
   }
   &__social--img {
@@ -95,6 +100,6 @@
   100% {
     transform: translateY(0px);
     opacity: 1;
-    
+
   }
 }

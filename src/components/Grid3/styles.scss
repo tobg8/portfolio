@@ -1,0 +1,87 @@
+.grid3 {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+  height: auto;
+  &__title-container {
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    bottom: 0;
+    border: 2px solid black;
+    border-top: 0;
+  }
+  &__ref {
+    position: absolute;
+    top: 0;
+  }
+  &__ellipse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(0px);
+    opacity: .3;
+    z-index: 3;
+    width: 100%;
+    box-sizing: content-box;
+    height: 100%;
+    background-image: url(../../assets/images/ellipse.webp);
+    background-repeat: no-repeat;
+    background-position: 20% 20%;
+    border-end-end-radius: 300px;
+    z-index: 0;
+  }
+  &__svg-container {
+    position: absolute;
+    right: -8%;
+    top: 3%;
+    opacity: 0;
+    &--modifier {
+      animation: slideLeft .7s 600ms forwards;
+    }
+  }
+  &__svg {
+    width: 80%;
+  }
+  &__title {
+    position: absolute;
+    bottom: 3%;
+    left: 2%;
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0;
+    &--modifier {
+      animation: slideShow 2s 800ms forwards;
+    }
+    &-ref {
+      position: absolute;
+      bottom: 40%;
+    }
+  }
+}
+
+@keyframes slideShow {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+
+  }
+}

@@ -1,5 +1,6 @@
 .app {
   width: 100vw;
+  height: auto;
   &::after {
     animation: grain 12s steps(10) infinite;
     background-image: url("../../assets/images/depositphotos_310693914-stock-illustration-truchet-random-pattern-generative-tile.jpg");

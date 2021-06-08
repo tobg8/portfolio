@@ -1,15 +1,25 @@
 import React, { useState, useEffect } from 'react';
+import Lottie from 'react-lottie';
 import './styles.scss';
 import PropTypes from 'prop-types';
 import Header from 'src/components/Header';
 import headerRefHook from 'src/hooks/headerRefHook';
-import hamburger1 from '../../assets/images/hamburger1.svg';
+import animationData from 'src/assets/lotties/animation.json';
 
 const Grid1 = ({
   scroll,
   scrollWork,
 }) => {
   const [navbar, setNavbar] = useState(false);
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  };
 
   const [headerRef, inView] = headerRefHook({
     root: null,
@@ -29,15 +39,19 @@ const Grid1 = ({
       <Header navbar={navbar} setNavbar={setNavbar} modifier="modifier" inView={inView} className="false" scroll={scroll} scrollWork={scrollWork} />
       <div className="grid1__ellipse" />
       <div className="grid1__name">
-        <p className="grid1__name--content">Theo Beloeil</p>
+        <p className="grid1__name--content">Theo Beloeil-Guia</p>
       </div>
       <div className="grid1__hamburger">
-        <img className="grid1__hamburger-svg" src={hamburger1} alt="" onClick={() => setNavbar(true)} />
+        <Lottie
+          options={defaultOptions}
+          width={200}
+          style={{ transform: 'scale(2)' }}
+        />
       </div>
       <div className="grid1__title-1">
         <img className="grid1__title-1--svg" src="https://static.tildacdn.com/tild3935-3565-4537-a538-333935346532/web_designer.svg" alt="bar code" />
         <p className="grid1__title-1--initial">t</p>
-        <div className="grid1__title-1--color" />
+        {/* <div className="grid1__title-1--color" /> */}
         <p className="grid1__title-1--content">Unique &</p>
       </div>
       <div className="grid1__title-2">

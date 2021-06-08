@@ -22,7 +22,7 @@
     grid-area: name;
     display: flex;
     align-items: center;
-    border: 2px solid black;
+    // border: 2px solid black;
     border-top: 0;
     padding-left: .2em;
     font-weight: bold;
@@ -30,14 +30,13 @@
   }
   &__hamburger {
     grid-area: hamburger;
-    border: 2px solid black;
+    // border: 2px solid black;
     border-top: 0;
     border-left: 0;
     display: flex;
     justify-content: center;
     &-svg {
       width: 50%;
-
     }
   }
   &__title-1 {
@@ -50,7 +49,7 @@
     justify-content: flex-end;
     padding-left: .2em;
     border: 2px solid black;
-    border-top: 0;
+    // border-top: 0;
     padding-bottom: .2em;
     background-color: white;
     text-transform: uppercase;
@@ -99,6 +98,7 @@
     &--content {
       opacity: 0;
       animation: slideShow 1s 700ms forwards;
+      padding-left: .15em;
     }
   }
   &__title-3 {
@@ -214,4 +214,18 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+
+@keyframes grain {
+  0%, 100% { transform:translate(0, 0) }
+  10% { transform:translate(-5%, -10%) }
+  20% { transform:translate(-15%, 5%) }
+  30% { transform:translate(7%, -25%) }
+  40% { transform:translate(-5%, 25%) }
+  50% { transform:translate(-15%, 10%) }
+  60% { transform:translate(15%, 0%) }
+  70% { transform:translate(0%, 15%) }
+  80% { transform:translate(3%, 35%) }
+  90% { transform:translate(-10%, 10%) }
 }

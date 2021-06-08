@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import workHeaderHook from 'src/hooks/workHeaderHook';
+import textHook from 'src/hooks/textHook';
+import linkRefHook from 'src/hooks/linkRefHook';
 import github from 'src/assets/images/logo-github.svg';
 import './styles.scss';
 
@@ -9,14 +12,32 @@ const Work = ({
   githubUrl,
   websiteUrl,
 }) => {
-  const wow = 'truc';
+  const [workReference, isSeen] = workHeaderHook({
+    root: null,
+    rootMargin: '0px',
+    threshold: 1.0,
+  });
+
+  const [textRef, inView] = textHook({
+    root: null,
+    rootMargin: '0px',
+    threshold: 1.0,
+  });
+
+  const [linkRef, inWindow] = linkRefHook({
+    root: null,
+    rootMargin: '0px',
+    threshold: 1.0,
+  });
+
   return (
     <div className="work">
       <section className="work__infos">
-        <p>{name}</p>
-        <p className="work__infos--modifier">{description}</p>
+        <p className={isSeen ? 'work__title work__title--modifier' : 'work__title'}>{name}</p>
+        <p className={inView ? 'work__description work__description--modifier' : 'work__description'}>{description}</p>
       </section>
-      <section className="work__links">
+      <div ref={textRef} className="work__description-ref" />
+      <section className={inWindow ? 'work__links work__links--modifier' : 'work__links'}>
         <a
           href={githubUrl}
           target="_blank"
@@ -25,7 +46,7 @@ const Work = ({
         >
           <img className="work__github" src={github} alt="github icon" />
         </a>
-
+        <div className="work__title-ref" ref={workReference} />
         <a
           className="work__links-container"
           href={websiteUrl}
@@ -36,7 +57,7 @@ const Work = ({
           <p className="work__learn-more">Learn more</p>
           <img src="https://static.tildacdn.com/tild3336-3931-4333-b931-633866326462/button.svg" alt="arrow icon" />
         </a>
-
+        <div className="work__links-ref" ref={linkRef} />
       </section>
     </div>
   );

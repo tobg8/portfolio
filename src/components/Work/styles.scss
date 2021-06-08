@@ -6,7 +6,23 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
   z-index: 1;
+  &__description {
+    font-weight: normal;
+    font-size: .9em;
+    width: 100%;
+    text-overflow: clip;
+    white-space:unset;
+    opacity: 0;
+    &--modifier {
+      animation: slideShow 2s 300ms forwards;
+    }
+    &-ref {
+      position: absolute;
+      bottom: 50%;
+    }
+  }
   &__infos {
     font-size: 1.1em;
     font-weight: bold;
@@ -15,21 +31,28 @@
     height: 70%;
     justify-content: space-around;
     margin-left: 1em;
+  }
+  &__title{
+    opacity: 0;
     &--modifier {
-      font-weight: normal;
-      font-size: .9em;
-      width: 100%;
-      text-overflow: clip;
-      white-space:unset;
+      animation: slideShow 2s 300ms forwards;
+    }
+    &-ref {
+      position: absolute;
+      top: 19%;
     }
   }
   &__links {
     height: 30%;
+    opacity: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-left: 1em;
     margin-right: 1em;
+    &--modifier {
+      animation: slideShow 2s 300ms forwards;
+    }
   }
   &__github {
     width: 30px;
@@ -46,5 +69,22 @@
   }
   &__learn-more {
     margin-right: .5em;
+  }
+  &__links-ref {
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@keyframes slideShow {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+
   }
 }

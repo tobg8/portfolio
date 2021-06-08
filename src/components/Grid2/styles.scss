@@ -14,14 +14,17 @@
     left: 0;
     border-end-end-radius: 50px;
     border-end-start-radius: 50px;
-    opacity: .3;
+    opacity: .8;
     z-index: 1;
     width: 100%;
+    // overflow-x: hidden;
+    // transform: scale(2);
     box-sizing: content-box;
     height: 90%;
-    background-image: url(../../assets/images/ellipse.webp);
-    background-repeat: no-repeat;
-    background-position: 30% 30%;
+    background-image: url(../../assets/images/ellipseBlue.webp);
+    background-repeat: repeat;
+    background-position: 40% 40%;
+    background-size: 210%;
   }
   &__text-container {
   grid-area: text;

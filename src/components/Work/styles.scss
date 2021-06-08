@@ -51,7 +51,7 @@
     margin-left: 1em;
     margin-right: 1em;
     &--modifier {
-      animation: slideShow 2s 300ms forwards;
+      animation: slideShow .5s 300ms forwards;
     }
   }
   &__github {

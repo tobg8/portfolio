@@ -14,7 +14,7 @@
   }
   &__ref {
     position: absolute;
-    top: 0;
+    top: -85px;
   }
   &__ellipse {
     position: absolute;
@@ -53,7 +53,7 @@
     text-transform: uppercase;
     opacity: 0;
     &--modifier {
-      animation: slideShow 2s 800ms forwards;
+      animation: slideShow 1s 800ms forwards;
     }
     &-ref {
       position: absolute;

@@ -13,7 +13,7 @@ const Header = ({
   scroll,
   scrollWork,
 }) => (
-  <div className={inView ? 'header header--close' : `header header--${className}`}>
+  <header className={inView ? 'header header--close' : `header header--${className}`}>
     <div className="header__in-out" />
     <div className="header__mid" />
     <div className={`header__hamburger header__hamburger--${modifier}`}>
@@ -21,7 +21,7 @@ const Header = ({
     </div>
     <div className="header__in-out" />
     <HiddenMenu navbar={navbar} setNavbar={setNavbar} scroll={scroll} scrollWork={scrollWork} />
-  </div>
+  </header>
 );
 Header.propTypes = {
   className: PropTypes.string,

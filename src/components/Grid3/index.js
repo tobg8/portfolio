@@ -26,7 +26,7 @@ const Grid3 = ({
         <div className="grid3__title-ref" ref={textRef} />
       </div>
       {projects.map((project) => (
-        <Work {...project} />
+        <Work {...project} key={project.id} />
       ))}
     </div>
   );

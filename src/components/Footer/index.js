@@ -6,7 +6,6 @@ import arrow from 'src/assets/images/arrows.svg';
 import workHeaderHook from 'src/hooks/workHeaderHook';
 import textHook from 'src/hooks/textHook';
 import linkRefHook from 'src/hooks/linkRefHook';
-import arrowHook from 'src/hooks/arrowHook';
 
 const Footer = () => {
   const [workReference, isSeen] = workHeaderHook({
@@ -32,7 +31,6 @@ const Footer = () => {
     rootMargin: '0px',
     threshold: 1.0,
   });
-  console.log(inWindow);
   return (
     <footer className="footer">
       <div className="footer__svg-ref" ref={arrowRef} />

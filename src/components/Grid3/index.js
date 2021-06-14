@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Work from 'src/components/Work';
+import Footer from 'src/components/Footer';
 import projects from 'src/assets/data/project';
 import textHook from 'src/hooks/textHook';
 import './styles.scss';
@@ -28,6 +29,7 @@ const Grid3 = ({
       {projects.map((project) => (
         <Work {...project} key={project.id} />
       ))}
+      <Footer />
     </div>
   );
 };

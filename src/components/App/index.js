@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import './styles.scss';
 import Page from 'src/components/Page';
 import Grid1 from 'src/components/Grid1';
@@ -16,30 +17,37 @@ const App = () => {
 
   return (
     <div className="app">
-      <Page
-        childrens={(
-          <Grid1
-            scroll={scroll}
-            scrollWork={scrollWork}
+      <Switch>
+        <Route exact path="/">
+          <Page
+            childrens={(
+              <Grid1
+                scroll={scroll}
+                scrollWork={scrollWork}
+              />
+            )}
           />
-        )}
-      />
-      <Page
-        childrens={(
-          <Grid2
-            scroll={scroll}
-            aboutRef={aboutRef}
-            scrollWork={scrollWork}
+          <Page
+            childrens={(
+              <Grid2
+                scroll={scroll}
+                aboutRef={aboutRef}
+                scrollWork={scrollWork}
+              />
+            )}
           />
-        )}
-      />
-      <Page
-        childrens={(
-          <Grid3
-            workRef={workRef}
+          <Page
+            childrens={(
+              <Grid3
+                workRef={workRef}
+              />
+            )}
           />
-        )}
-      />
+        </Route>
+        <Route exact path="/credits">
+          <div>Credits here</div>
+        </Route>
+      </Switch>
     </div>
   );
 };

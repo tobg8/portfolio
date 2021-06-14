@@ -8,6 +8,10 @@
   justify-content: space-between;
   position: relative;
   z-index: 1;
+  &:last-child {
+    border-bottom: 0;
+    background-color: red;
+  }
   &__description {
     font-weight: normal;
     font-size: .9em;

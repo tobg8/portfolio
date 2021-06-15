@@ -56,10 +56,11 @@
     position: relative;
     &--initial {
       position: absolute;
-      top: -2px;
-      left: 10px;
+      top: -5px;
+      left: 45px;
+      font-size: 2.3em;
       text-transform: lowercase;
-      animation: rotation 1s forwards;
+      animation: rotation 1s 2s forwards ease-in;
     }
     &--color {
       width: 60%;
@@ -78,6 +79,14 @@
       max-height: 43px;
       max-width: 120px;
       align-self: center;
+    }
+    &--svg2 {
+      position: absolute;
+      transform: rotate(90deg);
+      top: 10px;
+      right: 50px;
+      max-height: 100px;
+      max-width: 120px;
     }
     &--content {
       opacity: 0;
@@ -211,8 +220,29 @@
   0% {
     transform: rotate(0deg);
   }
+  10% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  40% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(-25deg);
+  }
+  90% {
+    transform: rotate(-10deg);
+  }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
   }
 }
 
@@ -228,4 +258,61 @@
   70% { transform:translate(0%, 15%) }
   80% { transform:translate(3%, 35%) }
   90% { transform:translate(-10%, 10%) }
+}
+
+
+@media screen and (max-height: 700px) {
+  .grid1 {
+    &__title-1 {
+      &--svg2 {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .grid1 {
+    &__title-1 {
+      &--initial {
+        display: none;
+      }
+      &--content {
+        font-size: .8em;
+        text-align: center;
+      }
+    }
+    &__title-2 {
+      &--content {
+        font-size: .8em;
+        margin-left: .8em;
+        text-align: center;
+      }
+    }
+    &__title-3 {
+      &--content {
+        font-size: 2.5em;
+        text-align: center;
+      }
+    }
+    &__phrase {
+      font-size: .9em;
+      text-align: center;
+    }
+    &__dw-button {
+      padding: .8em;
+      font-size: .8em;
+    }
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .grid1 {
+    &__title-2 {
+      &--content {
+        margin-left: .3em;
+      }
+    }
+  }
 }

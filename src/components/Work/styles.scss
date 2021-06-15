@@ -92,3 +92,20 @@
 
   }
 }
+
+
+@media screen and (max-width: 400px) {
+  .work {
+    &__title {
+      font-size: 1.1em;
+    }
+    &__description {
+      font-size: .9em;
+      padding-right: .6em;
+      letter-spacing: 1px;
+    }
+    &__github {
+      margin: 0;
+    }
+  }
+}

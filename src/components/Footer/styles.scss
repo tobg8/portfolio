@@ -1,6 +1,6 @@
 .footer {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   height: 30vh;
   width: 100vw;
   overflow: hidden;
@@ -112,5 +112,11 @@
 @media screen and (max-width: 400px) {
   .footer {
     margin-left: -3.5em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer {
+    margin-left: -3em;
   }
 }

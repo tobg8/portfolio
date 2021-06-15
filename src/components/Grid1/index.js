@@ -50,6 +50,7 @@ const Grid1 = ({
       </div>
       <div className="grid1__title-1">
         <img className="grid1__title-1--svg" src="https://static.tildacdn.com/tild3935-3565-4537-a538-333935346532/web_designer.svg" alt="bar code" />
+        <img src="https://static.tildacdn.com/tild3735-3462-4237-b561-653936366664/df.svg" alt="decoration" className="grid1__title-1--svg2" />
         <p className="grid1__title-1--initial">t</p>
         {/* <div className="grid1__title-1--color" /> */}
         <p className="grid1__title-1--content">Unique &</p>

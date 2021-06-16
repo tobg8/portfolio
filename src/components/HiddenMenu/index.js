@@ -13,7 +13,7 @@ const HiddenMenu = ({
   <nav className={navbar ? 'nav' : 'nav nav--off'}>
     <div className="nav__overlay" />
     <div className="nav__container">
-      <img className="nav__cross" src={close} alt="cross" onClick={() => setNavbar(false)} />
+      <img className="nav__cross" src={close} alt="cross" onClick={() => setNavbar(false)} width="100" height="100" />
       <ul className="nav__links">
         <li
           className="nav__link"

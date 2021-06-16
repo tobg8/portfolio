@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, {
+  useState, useEffect, Suspense, lazy,
+} from 'react';
 import Lottie from 'react-lottie';
 import './styles.scss';
 import PropTypes from 'prop-types';
-import Header from 'src/components/Header';
+// import Header from 'src/components/Header';
 import headerRefHook from 'src/hooks/headerRefHook';
 import animationData from 'src/assets/lotties/animation.json';
+import barcode from 'src/assets/images/barcode.svg';
+
+const Header = lazy(() => import('../Header'));
 
 const Grid1 = ({
   scroll,
@@ -36,7 +41,9 @@ const Grid1 = ({
 
   return (
     <div className="grid1">
-      <Header navbar={navbar} setNavbar={setNavbar} modifier="modifier" inView={inView} className="false" scroll={scroll} scrollWork={scrollWork} />
+      <Suspense fallback={<div>script is loading</div>}>
+        <Header navbar={navbar} setNavbar={setNavbar} modifier="modifier" inView={inView} className="false" scroll={scroll} scrollWork={scrollWork} />
+      </Suspense>
       <div className="grid1__ellipse" />
       <div className="grid1__name">
         <p className="grid1__name--content">Theo Beloeil-Guia</p>
@@ -49,7 +56,7 @@ const Grid1 = ({
         />
       </div>
       <div className="grid1__title-1">
-        <img className="grid1__title-1--svg" src="https://static.tildacdn.com/tild3935-3565-4537-a538-333935346532/web_designer.svg" alt="bar code" />
+        <img className="grid1__title-1--svg" src={barcode} alt="bar code" width="600" height="400" />
         <img src="https://static.tildacdn.com/tild3735-3462-4237-b561-653936366664/df.svg" alt="decoration" className="grid1__title-1--svg2" />
         <p className="grid1__title-1--initial">t</p>
         {/* <div className="grid1__title-1--color" /> */}

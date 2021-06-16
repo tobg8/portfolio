@@ -44,7 +44,7 @@ const Work = ({
           rel="noopener noreferrer"
           aria-label="linkedin page"
         >
-          <img className="work__github" src={github} alt="github icon" />
+          <img className="work__github" src={github} alt="github icon" width="50" height="50" />
         </a>
         <div className="work__title-ref" ref={workReference} />
         <a
@@ -54,8 +54,8 @@ const Work = ({
           rel="noopener noreferrer"
           aria-label="linkedin page"
         >
-          <p className="work__learn-more">Learn more</p>
-          <img src="https://static.tildacdn.com/tild3336-3931-4333-b931-633866326462/button.svg" alt="arrow icon" />
+          <p className="work__learn-more">More about {name}</p>
+          <img src="https://static.tildacdn.com/tild3336-3931-4333-b931-633866326462/button.svg" alt="arrow icon" width="20" height="20" />
         </a>
         <div className="work__links-ref" ref={linkRef} />
       </section>

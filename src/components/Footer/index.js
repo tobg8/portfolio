@@ -35,7 +35,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__svg-ref" ref={arrowRef} />
       <div className={svgInWindow ? 'footer__arrow-container footer__arrow-container--modifier' : 'footer__arrow-container'} onClick={scrollToTop}>
-        <img src={arrow} alt="arrow icon" className="footer__arrow" />
+        <img src={arrow} alt="arrow icon" className="footer__arrow" width="600" height="400" />
       </div>
       <div className="footer__infos-container">
         <div className="footer__name-ref" ref={textRef} />

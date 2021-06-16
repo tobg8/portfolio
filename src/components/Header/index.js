@@ -17,7 +17,7 @@ const Header = ({
     <div className="header__in-out" />
     <div className="header__mid" />
     <div className={`header__hamburger header__hamburger--${modifier}`}>
-      <img className="header__hamburger-img" src={hamburger1} alt="" onClick={() => setNavbar(true)} />
+      <img className="header__hamburger-img" src={hamburger1} alt="" onClick={() => setNavbar(true)} width="100" height="100" />
     </div>
     <div className="header__in-out" />
     <HiddenMenu navbar={navbar} setNavbar={setNavbar} scroll={scroll} scrollWork={scrollWork} />

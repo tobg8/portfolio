@@ -51,7 +51,7 @@ const Grid2 = ({
         <div ref={textRef} />
       </div>
       <div className="grid2__img-container">
-        <img className="grid2__img" src={profile} alt="it's me" />
+        <img className="grid2__img" src={profile} alt="it's me" preconnect="true" width="600" height="400" />
       </div>
       <div className="grid2__ref" ref={circleRef}>
         <a
@@ -61,7 +61,7 @@ const Grid2 = ({
           rel="noopener noreferrer"
           aria-label="instagram page"
         >
-          <img className="grid2__social--img" src={instagram} alt="instagram icon" />
+          <img className="grid2__social--img" src={instagram} alt="instagram icon" width="600" height="400" />
         </a>
         <a
           className={isVisible ? 'grid2__social grid2__social--modifier2' : 'grid2__social'}
@@ -70,7 +70,7 @@ const Grid2 = ({
           rel="noopener noreferrer"
           aria-label="twitter page"
         >
-          <img className="grid2__social--img" src={twitter} alt="instagram icon" />
+          <img className="grid2__social--img" src={twitter} alt="instagram icon" width="600" height="400" />
         </a>
         <a
           className={isVisible ? 'grid2__social grid2__social--modifier3' : 'grid2__social'}
@@ -79,7 +79,7 @@ const Grid2 = ({
           rel="noopener noreferrer"
           aria-label="linkedin page"
         >
-          <img className="grid2__social--img" src={linkedin} alt="instagram icon" />
+          <img className="grid2__social--img" src={linkedin} alt="instagram icon" width="600" height="400" />
         </a>
       </div>
     </div>

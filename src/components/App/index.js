@@ -1,10 +1,15 @@
-import React, { useRef } from 'react';
+import React, { useRef, Suspense, lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './styles.scss';
 import Page from 'src/components/Page';
 import Grid1 from 'src/components/Grid1';
-import Grid2 from 'src/components/Grid2';
-import Grid3 from 'src/components/Grid3';
+// import Grid2 from 'src/components/Grid2';
+// import Grid3 from 'src/components/Grid3';
+
+// const Page = lazy(() => import('../Page'));
+// const Grid1 = lazy(() => import('../Grid1'));
+const Grid2 = lazy(() => import('../Grid2'));
+const Grid3 = lazy(() => import('../Grid3'));
 
 const App = () => {
   const aboutRef = useRef(null);
@@ -27,27 +32,32 @@ const App = () => {
               />
             )}
           />
-          <Page
-            childrens={(
-              <Grid2
-                scroll={scroll}
-                aboutRef={aboutRef}
-                scrollWork={scrollWork}
-              />
-            )}
-          />
-          <Page
-            childrens={(
-              <Grid3
-                workRef={workRef}
-              />
-            )}
-          />
+          <Suspense fallback={<div>Loading</div>}>
+            <Page
+              childrens={(
+                <Grid2
+                  scroll={scroll}
+                  aboutRef={aboutRef}
+                  scrollWork={scrollWork}
+                />
+                )}
+            />
+          </Suspense>
+          <Suspense fallback={<div>Loading</div>}>
+            <Page
+              childrens={(
+                <Grid3
+                  workRef={workRef}
+                />
+              )}
+            />
+          </Suspense>
         </Route>
         <Route exact path="/credits">
           <div>Credits here</div>
         </Route>
       </Switch>
+
     </div>
   );
 };

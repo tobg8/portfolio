@@ -91,6 +91,7 @@
     &--content {
       opacity: 0;
       animation: slideShow 1s 500ms forwards;
+      text-align: center;
     }
   }
   &__title-2 {
@@ -107,7 +108,8 @@
     &--content {
       opacity: 0;
       animation: slideShow 1s 700ms forwards;
-      padding-left: .15em;
+      width: 100%;
+      text-align: center;
     }
   }
   &__title-3 {
@@ -124,6 +126,7 @@
       margin-bottom: .2em;
       padding-top: .2em;
       opacity: 0;
+      text-align: center;
       animation: slideShow 1s 900ms forwards;
     }
   }
@@ -285,7 +288,7 @@
     &__title-2 {
       &--content {
         font-size: .8em;
-        margin-left: .8em;
+        // margin-left: .7em;
         text-align: center;
       }
     }
@@ -302,17 +305,6 @@
     &__dw-button {
       padding: .8em;
       font-size: .8em;
-    }
-  }
-}
-
-
-@media screen and (max-width: 400px) {
-  .grid1 {
-    &__title-2 {
-      &--content {
-        margin-left: .3em;
-      }
     }
   }
 }

@@ -41,7 +41,7 @@ const Grid1 = ({
 
   return (
     <div className="grid1">
-      <Suspense fallback={<div>script is loading</div>}>
+      <Suspense fallback={<div />}>
         <Header navbar={navbar} setNavbar={setNavbar} modifier="modifier" inView={inView} className="false" scroll={scroll} scrollWork={scrollWork} />
       </Suspense>
       <div className="grid1__ellipse" />

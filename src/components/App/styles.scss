@@ -12,6 +12,13 @@
     top: -100%;
     width: 300%;
   }
+  &__loader-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 50vh;
+  }
 }
 
 @keyframes grain {

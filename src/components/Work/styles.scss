@@ -37,6 +37,7 @@
     margin-left: 1em;
   }
   &__title{
+    margin-top: .4em;
     opacity: 0;
     &--modifier {
       animation: slideShow 2s 300ms forwards;
@@ -108,6 +109,17 @@
     }
     &__github {
       margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .work  {
+    &__description {
+      font-size: .7em;
+    }
+    &__learn-more {
+      font-size: .7em;
     }
   }
 }

@@ -143,6 +143,9 @@
 
 @media screen and (min-width: 1024px) {
   .footer {
-    display: none;
+    margin-left: -22%;
+    &__arrow-container {
+      width: 10%;
+    }
   }
 }

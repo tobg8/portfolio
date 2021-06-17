@@ -27,4 +27,18 @@ export default [
     websiteUrl: 'https://something.com',
     githubUrl: 'https://www.github.com',
   },
+  {
+    id: 5,
+    name: 'Demo 5',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam massa dolor, blandit ac neque dignissim, mattis porttitor elit. Sed gravida. ',
+    websiteUrl: 'https://something.com',
+    githubUrl: 'https://www.github.com',
+  },
+  {
+    id: 6,
+    name: 'Demo 6',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam massa dolor, blandit ac neque dignissim, mattis porttitor elit. Sed gravida. ',
+    websiteUrl: 'https://something.com',
+    githubUrl: 'https://www.github.com',
+  },
 ];

@@ -7,6 +7,7 @@ import github from 'src/assets/images/logo-github.svg';
 import './styles.scss';
 
 const Work = ({
+  id,
   name,
   description,
   githubUrl,
@@ -30,8 +31,15 @@ const Work = ({
     threshold: 1.0,
   });
 
+  const evenOrOdd = () => {
+    if (id % 2 === 0) {
+      return true;
+    }
+    return false;
+  };
+
   return (
-    <div className="work">
+    <div className={evenOrOdd(id) ? 'work work--modifier' : 'work'}>
       <section className="work__infos">
         <p className={isSeen ? 'work__title work__title--modifier' : 'work__title'}>{name}</p>
         <p className={inView ? 'work__description work__description--modifier' : 'work__description'}>{description}</p>
@@ -64,6 +72,7 @@ const Work = ({
 };
 
 Work.propTypes = {
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   githubUrl: PropTypes.string.isRequired,

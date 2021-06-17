@@ -103,3 +103,22 @@
     }
   }
 }
+
+
+@media screen and (min-width: 1024px) {
+  .grid3 {
+    &__ellipse {
+      background-position: 70% 70%;
+    }
+    &__title {
+      margin-bottom: 1em;
+    }
+    &__svg {
+      margin-top: 1em;
+    }
+    &__work-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

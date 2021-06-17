@@ -22,7 +22,7 @@
     box-sizing: content-box;
     height: 90%;
     background-image: url(../../assets/images/ellipseBlue.webp);
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-position: 40% 40%;
     background-size: 210%;
   }
@@ -71,6 +71,8 @@
     justify-content: center;
     z-index: 1;
     cursor: pointer;
+    // max-width: 100px;
+    // max-height: 100px;
     &--modifier1 {
       animation: slideShow 1s 100ms forwards;
     }
@@ -83,6 +85,7 @@
   }
   &__social--img {
     width: 50%;
+    max-height: 100px;
   }
   display: grid;
   height: 100%;
@@ -137,4 +140,34 @@
       height: auto;
     }
   }
+}
+
+// Desktop
+
+@media screen and (min-width: 1024px) {
+  .grid2 {
+    &__ellipse {
+      background-size: 100%;
+      background-position: 100% 50%;
+    }
+    display: grid;
+    height: 100%;
+    grid-template-columns: 15% 35% 35% 15%;
+    grid-template-rows: 50% 40% 10%;
+    grid-template-areas:
+    ". text image ."
+    ". text image ."
+    ". ref ref .";
+    &__img {
+      object-fit: cover;
+      height: 100%;
+    }
+    &__social--img {
+      width: 25%;
+    }
+    &__text {
+      font-size: 1.9em;
+    }
+  }
+
 }

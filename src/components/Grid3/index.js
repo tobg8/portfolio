@@ -27,9 +27,11 @@ const Grid3 = ({
         <p className={inView ? 'grid3__title grid3__title--modifier' : 'grid3__title'}>My Portfolio</p>
         <div className="grid3__title-ref" ref={textRef} />
       </div>
-      {projects.map((project) => (
-        <Work {...project} key={project.id} />
-      ))}
+      <div className="grid3__work-container">
+        {projects.map((project) => (
+          <Work {...project} key={project.id} />
+        ))}
+      </div>
       <Footer creditsRef={creditsRef} />
     </div>
   );

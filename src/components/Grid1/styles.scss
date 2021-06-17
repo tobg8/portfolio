@@ -308,3 +308,30 @@
     }
   }
 }
+
+
+@media screen and (min-width: 750px) {
+  .grid1 {
+    &__title-1 {
+      &--content {
+        font-size: 1.7em;
+      }
+    }
+    &__title-2 {
+      &--content {
+        font-size: 1.7em;
+      }
+    }
+    &__title-3 {
+      &--content {
+        font-size: 5.2em;
+      }
+    }
+    &__phrase {
+      font-size: 1.4em;
+    }
+    &__dw-button {
+      width: 40%;
+    }
+  }
+}

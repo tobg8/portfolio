@@ -5,6 +5,8 @@ import Lottie from 'react-lottie';
 import './styles.scss';
 import PropTypes from 'prop-types';
 // import Header from 'src/components/Header';
+import Navbar from 'src/components/Navbar';
+import Decoration1 from 'src/components/Decoration1';
 import headerRefHook from 'src/hooks/headerRefHook';
 import animationData from 'src/assets/lotties/animation.json';
 import barcode from 'src/assets/images/barcode.svg';
@@ -48,14 +50,22 @@ const Grid1 = ({
       <div className="grid1__ellipse" />
       <div className="grid1__name">
         <p className="grid1__name--content">Theo Beloeil-Guia</p>
+        {/* NAVBAR */}
+      </div>
+      <div className="grid1__navbar-container">
+        <Navbar
+          scroll={scroll}
+          scrollWork={scrollWork}
+          scrollCredits={scrollCredits}
+        />
       </div>
       <div className="grid1__hamburger">
         <Lottie
           options={defaultOptions}
-          width={200}
+          width={350}
           style={{ transform: 'scale(2)' }}
-          className="grid1__lottie"
         />
+        {/* CONTACTS */}
       </div>
       <div className="grid1__title-1">
         <img className="grid1__title-1--svg" src={barcode} alt="bar code" width="600" height="400" />
@@ -64,6 +74,10 @@ const Grid1 = ({
         {/* <div className="grid1__title-1--color" /> */}
         <p className="grid1__title-1--content">Unique &</p>
       </div>
+      <div className="grid1__decoration1-container">
+        <Decoration1 />
+      </div>
+      <div className="grid1__decoration2-container" />
       <div className="grid1__title-2">
         <p className="grid1__title-2--content">Creative</p>
       </div>

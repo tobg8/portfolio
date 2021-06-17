@@ -1,0 +1,24 @@
+.navbar {
+  display: none;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .navbar {
+    display: block;
+    height: 100%;
+    z-index: 1;
+    &__container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+    }
+    &__link {
+      font-size: 1em;
+      font-weight: bold;
+      z-index: 2;
+      cursor: pointer;
+    }
+  }
+}

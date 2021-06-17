@@ -85,3 +85,10 @@
     display: hidden;
   }
 }
+
+
+@media screen and (min-width: 1024px) {
+  .header {
+    display: none;
+  }
+}

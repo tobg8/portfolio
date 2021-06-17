@@ -54,6 +54,7 @@ const Grid1 = ({
           options={defaultOptions}
           width={200}
           style={{ transform: 'scale(2)' }}
+          className="grid1__lottie"
         />
       </div>
       <div className="grid1__title-1">

@@ -107,7 +107,7 @@
   }
 }
 
-
+// Mobile
 @media screen and (max-width: 400px) {
   .grid2 {
     &__text {
@@ -120,6 +120,21 @@
   .grid2 {
     &__text {
       font-size: .8em;
+    }
+  }
+}
+
+// Tablets
+@media screen and (min-width: 750px) {
+  .grid2 {
+    &__text {
+      font-size: 1.6em;
+    }
+    &__social {
+      width: 20%;
+    }
+    &__img {
+      height: auto;
     }
   }
 }

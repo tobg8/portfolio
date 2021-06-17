@@ -123,3 +123,24 @@
     }
   }
 }
+
+
+
+@media screen and (min-width: 750px) {
+  .work {
+    &__title {
+      font-size: 2em;
+    }
+    &__description {
+      font-size: 1.4em;
+      line-height: 1.3;
+    }
+    &__github {
+      width: 60px;
+      height: 60px
+    }
+    &__learn-more {
+      font-size: 1.5em;
+    }
+  }
+}

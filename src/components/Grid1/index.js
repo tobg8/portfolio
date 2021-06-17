@@ -14,6 +14,7 @@ const Header = lazy(() => import('../Header'));
 const Grid1 = ({
   scroll,
   scrollWork,
+  scrollCredits,
 }) => {
   const [navbar, setNavbar] = useState(false);
 
@@ -42,7 +43,7 @@ const Grid1 = ({
   return (
     <div className="grid1">
       <Suspense fallback={<div />}>
-        <Header navbar={navbar} setNavbar={setNavbar} modifier="modifier" inView={inView} className="false" scroll={scroll} scrollWork={scrollWork} />
+        <Header navbar={navbar} setNavbar={setNavbar} modifier="modifier" inView={inView} className="false" scroll={scroll} scrollWork={scrollWork} scrollCredits={scrollCredits} />
       </Suspense>
       <div className="grid1__ellipse" />
       <div className="grid1__name">
@@ -83,9 +84,11 @@ const Grid1 = ({
 Grid1.propTypes = {
   scroll: PropTypes.func,
   scrollWork: PropTypes.func.isRequired,
+  scrollCredits: PropTypes.func,
 };
 
 Grid1.defaultProps = {
   scroll: null,
+  scrollCredits: null,
 };
 export default Grid1;

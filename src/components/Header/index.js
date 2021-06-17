@@ -12,6 +12,7 @@ const Header = ({
   inView,
   scroll,
   scrollWork,
+  scrollCredits,
 }) => (
   <header className={inView ? 'header header--close' : `header header--${className}`}>
     <div className="header__in-out" />
@@ -20,7 +21,13 @@ const Header = ({
       <img className="header__hamburger-img" src={hamburger1} alt="" onClick={() => setNavbar(true)} width="100" height="100" />
     </div>
     <div className="header__in-out" />
-    <HiddenMenu navbar={navbar} setNavbar={setNavbar} scroll={scroll} scrollWork={scrollWork} />
+    <HiddenMenu
+      navbar={navbar}
+      setNavbar={setNavbar}
+      scroll={scroll}
+      scrollWork={scrollWork}
+      scrollCredits={scrollCredits}
+    />
   </header>
 );
 Header.propTypes = {
@@ -31,6 +38,7 @@ Header.propTypes = {
   inView: PropTypes.bool,
   scroll: PropTypes.func,
   scrollWork: PropTypes.func,
+  scrollCredits: PropTypes.func,
 };
 
 Header.defaultProps = {
@@ -39,6 +47,7 @@ Header.defaultProps = {
   inView: false,
   scrollWork: null,
   scroll: null,
+  scrollCredits: null,
 };
 
 export default Header;

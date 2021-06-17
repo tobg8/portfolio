@@ -1,13 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles.scss';
+import PropTypes from 'prop-types';
 import scrollToTop from 'src/hooks/scrollToTop';
 import arrow from 'src/assets/images/arrows.svg';
 import workHeaderHook from 'src/hooks/workHeaderHook';
 import textHook from 'src/hooks/textHook';
 import linkRefHook from 'src/hooks/linkRefHook';
 
-const Footer = () => {
+const Footer = ({
+  creditsRef,
+}) => {
   const [workReference, isSeen] = workHeaderHook({
     root: null,
     rootMargin: '0px',
@@ -42,12 +45,20 @@ const Footer = () => {
         <p className={inView ? 'footer__infos-name footer__infos-name--modifier' : 'footer__infos-name'}>Theo Beloeil Guia</p>
         <div className="footer__credits-ref" ref={workReference} />
         <Link className={isSeen ? 'footer__infos-credits footer__infos-credits--modifier' : 'footer__infos-credits'} to="/credits">Credits</Link>
-        {/* Push this in credits section */}
-        {/* <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */}
+        <div className="footer__credits-ref" ref={creditsRef} />
       </div>
       <p className={inWindow ? 'footer__techno footer__techno--modifier' : 'footer__techno'}>Made with React</p>
       <div className="footer__techno-ref" ref={linkRef} />
     </footer>
   );
 };
+
+Footer.propTypes = {
+  creditsRef: PropTypes.object,
+};
+
+Footer.defaultProps = {
+  creditsRef: null,
+};
+
 export default Footer;

@@ -9,6 +9,7 @@ const HiddenMenu = ({
   setNavbar,
   scroll,
   scrollWork,
+  scrollCredits,
 }) => (
   <nav className={navbar ? 'nav' : 'nav nav--off'}>
     <div className="nav__overlay" />
@@ -40,6 +41,15 @@ const HiddenMenu = ({
         >
           Work
         </li>
+        <li
+          className="nav__link"
+          onClick={() => {
+            setNavbar(false);
+            scrollCredits();
+          }}
+        >
+          Credits
+        </li>
       </ul>
     </div>
   </nav>
@@ -50,10 +60,12 @@ HiddenMenu.propTypes = {
   setNavbar: PropTypes.func.isRequired,
   scroll: PropTypes.func,
   scrollWork: PropTypes.func,
+  scrollCredits: PropTypes.func,
 };
 
 HiddenMenu.defaultProps = {
   scroll: null,
   scrollWork: null,
+  scrollCredits: null,
 };
 export default HiddenMenu;

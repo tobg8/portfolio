@@ -14,6 +14,7 @@ const Grid2 = ({
   scroll,
   aboutRef,
   scrollWork,
+  scrollCredits,
 }) => {
   const [circleRef, isVisible] = useRefHook({
     root: null,
@@ -38,7 +39,7 @@ const Grid2 = ({
 
   return (
     <div className="grid2">
-      <Header className={isVisible ? 'true' : 'off'} navbar={navbar} setNavbar={setNavbar} scroll={scroll} scrollWork={scrollWork} />
+      <Header className={isVisible ? 'true' : 'off'} navbar={navbar} setNavbar={setNavbar} scroll={scroll} scrollWork={scrollWork} scrollCredits={scrollCredits} />
       <div className="grid2__ellipse" />
       <div className="grid2__text-container">
         <div style={{ position: 'absolute', top: '-5px' }} ref={aboutRef} />
@@ -90,12 +91,14 @@ Grid2.propTypes = {
   scroll: PropTypes.func,
   aboutRef: PropTypes.object,
   scrollWork: PropTypes.func,
+  scrollCredits: PropTypes.func,
 };
 
 Grid2.defaultProps = {
   scroll: null,
   aboutRef: null,
   scrollWork: null,
+  scrollCredits: null,
 };
 
 export default Grid2;

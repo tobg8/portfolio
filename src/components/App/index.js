@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import './styles.scss';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import Loader from 'react-loader-spinner';
+import Credits from 'src/components/Credits';
 // import Page from 'src/components/Page';
 // import Grid1 from 'src/components/Grid1';
 // import Grid2 from 'src/components/Grid2';
@@ -21,6 +22,9 @@ const App = () => {
 
   const workRef = useRef(null);
   const scrollWork = () => workRef.current.scrollIntoView({ behavior: 'smooth' });
+
+  const creditsRef = useRef(null);
+  const scrollCredits = () => creditsRef.current.scrollIntoView({ behavior: 'smooth' });
 
   return (
     <div className="app">
@@ -43,6 +47,7 @@ const App = () => {
                 <Grid1
                   scroll={scroll}
                   scrollWork={scrollWork}
+                  scrollCredits={scrollCredits}
                 />
             )}
             />
@@ -53,6 +58,7 @@ const App = () => {
                     scroll={scroll}
                     aboutRef={aboutRef}
                     scrollWork={scrollWork}
+                    scrollCredits={scrollCredits}
                   />
                 )}
               />
@@ -62,6 +68,8 @@ const App = () => {
                 childrens={(
                   <Grid3
                     workRef={workRef}
+                    creditsRef={creditsRef}
+                    scrollCredits={scrollCredits}
                   />
               )}
               />
@@ -69,7 +77,7 @@ const App = () => {
           </Suspense>
         </Route>
         <Route exact path="/credits">
-          <div>Credits here</div>
+          <Credits />
         </Route>
       </Switch>
 

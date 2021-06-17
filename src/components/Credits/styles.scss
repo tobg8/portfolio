@@ -1,0 +1,61 @@
+.credits {
+  height: 80vh;
+  &__home-link {
+    margin-top: 2em;
+    z-index: 2;
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: .6em;
+    left: 33%;
+    bottom: 5.5%;
+  }
+  &__container {
+    z-index: 1;
+    height: 100%;
+    border: 2px solid black;
+    border-top: 0px;
+    width: 70%;
+    margin: 0 auto;
+    overflow: auto;
+  }
+  &__ellipse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .4;
+    z-index: 1;
+    width: 100%;
+    box-sizing: content-box;
+    height: 100%;
+    background-image: url(../../assets/images/ellipse.webp);
+    background-repeat: no-repeat;
+    background-position: 70% 80%;
+  }
+}
+
+.unit {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1em;
+  position: relative;
+  z-index: 1;
+  &__description {
+    border-top: 2px solid black;
+    padding-bottom: 1em;
+    font-size: 1em;
+    &--modifier {
+      border-top: 0px;
+    }
+  }
+
+  &__name {
+    padding-top: 1.3em;
+    padding-bottom: .6em;
+    text-transform: capitalize;
+  }
+  &__link {
+    z-index: 1;
+    padding-bottom: 1em;
+  }
+}

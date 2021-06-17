@@ -8,6 +8,7 @@ import './styles.scss';
 
 const Grid3 = ({
   workRef,
+  creditsRef,
 }) => {
   const [textRef, inView] = textHook({
     root: null,
@@ -29,17 +30,19 @@ const Grid3 = ({
       {projects.map((project) => (
         <Work {...project} key={project.id} />
       ))}
-      <Footer />
+      <Footer creditsRef={creditsRef} />
     </div>
   );
 };
 
 Grid3.propTypes = {
   workRef: PropTypes.object,
+  creditsRef: PropTypes.object,
 };
 
 Grid3.defaultProps = {
   workRef: null,
+  creditsRef: null,
 };
 
 export default Grid3;

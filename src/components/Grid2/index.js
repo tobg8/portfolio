@@ -42,7 +42,7 @@ const Grid2 = ({
       <Header className={isVisible ? 'true' : 'off'} navbar={navbar} setNavbar={setNavbar} scroll={scroll} scrollWork={scrollWork} scrollCredits={scrollCredits} />
       <div className="grid2__ellipse" />
       <div className="grid2__text-container">
-        <div style={{ position: 'absolute', top: '-5px' }} ref={aboutRef} />
+        <div style={{ position: 'absolute', top: '-50px' }} ref={aboutRef} />
         <p className={inView ? 'grid2__text grid2__text--modifier' : 'grid2__text'}>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           Odit et impedit quis numquam, sunt repellat pariatur placeat error

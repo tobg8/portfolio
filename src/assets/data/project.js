@@ -9,7 +9,7 @@ export default [
   {
     id: 2,
     name: 'Sorare bet',
-    description: 'A website where you could use your Sorare NFT cards to compete in leagues each week. Sequelize-PostgreSQL, express with node.js, graphQL, React-Redux.',
+    description: 'A website where you could use your Sorare NFT cards to compete in leagues each week. Sequelize-Psql, Express, graphQL, React-Redux.',
     websiteUrl: 'https://something.com',
     githubUrl: 'https://www.github.com',
   },

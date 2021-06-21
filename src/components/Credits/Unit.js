@@ -25,7 +25,7 @@ const Unit = ({
 );
 
 Unit.propTypes = {
-  link: PropTypes.string.isRequired,
+  link: PropTypes.string,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   modifier: PropTypes.bool,
@@ -35,6 +35,7 @@ Unit.propTypes = {
 Unit.defaultProps = {
   modifier: false,
   sorry: false,
+  link: '',
 };
 
 export default Unit;

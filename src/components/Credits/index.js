@@ -5,8 +5,8 @@ import Unit from './Unit';
 
 const Credits = () => (
   <div className="credits">
-    <Link className="credits__home-link" to="/">Back to home</Link>
     <div className="credits__ellipse" />
+    <Link className="credits__home-link" to="/">Back to home</Link>
     <div className="credits__container">
       <Unit
         name="marina suvorova"

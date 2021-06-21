@@ -21,5 +21,38 @@
       cursor: pointer;
       user-select: none;
     }
+    &__surprise {
+      display: none;
+      text-transform: uppercase;
+      position: absolute;
+      left: 8%;
+      font-size: .8em;
+      z-index: 1;
+      &--on {
+        opacity: 0;
+        display: block;
+        animation: slideToRight .7s .1s ease-in-out forwards;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        padding: .7em;
+      }
+    }
+  }
+}
+
+@keyframes slideToRight {
+  0% {
+    left: 8%
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    left: 2%;
+  }
+  100% {
+    left: 2.5%;
+    opacity: 1;
   }
 }

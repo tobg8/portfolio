@@ -46,25 +46,29 @@ const Work = ({
       </section>
       <div ref={textRef} className="work__description-ref" />
       <section className={inWindow ? 'work__links work__links--modifier' : 'work__links'}>
-        <a
-          href={githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="linkedin page"
-        >
-          <img className="work__github" src={github} alt="github icon" width="50" height="50" />
-        </a>
+        {githubUrl && (
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="linkedin page"
+          >
+            <img className="work__github" src={github} alt="github icon" width="50" height="50" />
+          </a>
+        )}
         <div className="work__title-ref" ref={workReference} />
-        <a
-          className="work__links-container"
-          href={websiteUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="linkedin page"
-        >
-          <p className="work__learn-more">More about {name}</p>
-          <img src="https://static.tildacdn.com/tild3336-3931-4333-b931-633866326462/button.svg" alt="arrow icon" width="20" height="20" />
-        </a>
+        {websiteUrl && (
+          <a
+            className="work__links-container"
+            href={websiteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="linkedin page"
+          >
+            <p className="work__learn-more">More about {name}</p>
+            <img src="https://static.tildacdn.com/tild3336-3931-4333-b931-633866326462/button.svg" alt="arrow icon" width="20" height="20" />
+          </a>
+        )}
         <div className="work__links-ref" ref={linkRef} />
       </section>
     </div>

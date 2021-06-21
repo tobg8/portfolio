@@ -4,7 +4,7 @@
   width: 100%;
   top: 0;
   left: 100%;
-  
+
   position: absolute;
   margin-left: 0%;
   height: 100vh;
@@ -36,6 +36,7 @@
   &__link {
     margin-bottom: 1.5em;
     cursor: pointer;
+    user-select: none;
   }
 }
 

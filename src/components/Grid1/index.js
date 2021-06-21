@@ -10,6 +10,7 @@ import Decoration1 from 'src/components/Decoration1';
 import headerRefHook from 'src/hooks/headerRefHook';
 import animationData from 'src/assets/lotties/animation.json';
 import barcode from 'src/assets/images/barcode.svg';
+import pdf from '../../../public/test.pdf';
 
 const Header = lazy(() => import('../Header'));
 
@@ -88,7 +89,7 @@ const Grid1 = ({
           <p className="grid1__phrase grid1__phrase--1">I'm a fullstack JS developper</p>
           <p className="grid1__phrase grid1__phrase--2">Actually improving skills at Epitech Paris</p>
           <p className="grid1__phrase grid1__phrase--3">Wish you an enjoyable trip</p>
-          <button type="button" className="grid1__dw-button">Download CV</button>
+          <a type="button" className="grid1__dw-button" href={pdf} target="_blank" rel="noreferrer">Download CV</a>
         </section>
       </section>
       <div className="grid1__reference" ref={headerRef} />

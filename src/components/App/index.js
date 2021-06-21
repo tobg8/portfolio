@@ -1,4 +1,6 @@
-import React, { useRef, Suspense, lazy } from 'react';
+import React, {
+  useRef, Suspense, lazy,
+} from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './styles.scss';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';

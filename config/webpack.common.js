@@ -2,6 +2,7 @@ const paths = require('./paths');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: [
@@ -25,13 +26,13 @@ module.exports = {
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
-        { 
+        {
           from: paths.static,
           to: '',
         }
       ],
     }),
-
+    new Dotenv(),
     new HtmlWebpackPlugin({
       favicon: paths.assets + '/favicon.ico',
       template: paths.assets + '/index.html',
@@ -65,7 +66,7 @@ module.exports = {
 
       // Images
       {
-        test: /\.(ico|gif|png|jpe?g|webp|svg)$/i,
+        test: /\.(ico|gif|png|jpe?g|webp|svg|pdf)$/i,
         use: [
           {
             loader: 'file-loader',

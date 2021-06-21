@@ -16,7 +16,7 @@ export default [
   {
     id: 3,
     name: 'Bauhaus 2.0',
-    description: 'Found this website on behance and tried to reproduce it ... not a complete sucess on desktop version but it\'s ok i guess. -Electric Red Studio -Svyat Vishnyakov -Anastasia Vishnyakova ',
+    description: 'Found this website on behance and tried to reproduce it ... not a complete sucess on desktop version but it\'s ok i guess.',
     websiteUrl: 'https://something.com',
     githubUrl: 'https://www.github.com',
   },
@@ -31,7 +31,7 @@ export default [
     id: 5,
     name: 'This actual portfolio',
     description: 'Well you looking at it, hope it looks well on every devices, i\'m sure it doesn\'t. React only, did not wanted to use a state manager this time.',
-    websiteUrl: 'https://something.com',
+    websiteUrl: '',
     githubUrl: 'https://www.github.com',
   },
   {

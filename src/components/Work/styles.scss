@@ -36,7 +36,7 @@
   &__title{
     margin-top: .4em;
     opacity: 0;
-    margin-left: .1em;
+    // margin-left: .1em;
     &--modifier {
       animation: slideShow 2s 300ms forwards;
     }
@@ -73,7 +73,7 @@
   &__learn-more {
     margin-right: .5em;
     text-align: center;
-    font-size: .9em;
+    font-size: .8em;
   }
   &__links-ref {
     background-color: red;
@@ -114,6 +114,7 @@
 @media screen and (max-width: 350px) {
   .work  {
     &__description {
+      padding-top: .4em;
       font-size: .7em;
     }
     &__learn-more {

@@ -50,6 +50,12 @@
     text-transform: uppercase;
     color: black;
     opacity: 0;
+    min-width: 50px;
+    position: relative;
+    padding: .4em;
+    background-color: black;
+    color: white;
+    letter-spacing: 2px;
     &--modifier {
       animation: slideShow .5s 300ms forwards;
     }
@@ -83,11 +89,6 @@
     bottom: 8%;
     left: 5%;
   }
-  // &__credits-ref {
-  //   width: 10px;
-  //   height: 10px;
-  //   background-color: red;
-  // }
 }
 
 @keyframes slideShow {

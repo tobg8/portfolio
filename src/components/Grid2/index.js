@@ -50,7 +50,7 @@ const Grid2 = ({
           <br />
           Je suis actuellement à la recherche d'une alternance début Janvier 2022.
           <br />
-          N'hésitez pas à me contacter !
+          Contactez-moi !
         </p>
         <div ref={textRef} />
       </div>

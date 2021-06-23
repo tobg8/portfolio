@@ -44,10 +44,13 @@ const Grid2 = ({
       <div className="grid2__text-container">
         <div style={{ position: 'absolute', top: '-50px' }} ref={aboutRef} />
         <p className={inView ? 'grid2__text grid2__text--modifier' : 'grid2__text'}>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Odit et impedit quis numquam, sunt repellat pariatur placeat error
-          aperiam consectetur quaerat voluptates officia voluptate,
-          provident dolores harum laboriosam dolore earum!
+          Actuellement étudiant, je travaille principalement sur du développement web.
+          <br />
+          J'utilise quotidiennement JS pour travailler, front & back.
+          <br />
+          Je suis actuellement à la recherche d'une alternance début Janvier 2022.
+          <br />
+          N'hésitez pas à me contacter !
         </p>
         <div ref={textRef} />
       </div>

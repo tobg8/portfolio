@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     name: 'Où est mon pain',
-    description: 'e-commerce website for a professional baker, we were 4 on this i worked on the front aspect, react-redux.',
+    description: 'Bakery e-commerce website, we were 4 on this i worked on the front aspect, react-redux.',
     websiteUrl: 'http://ou-est-mon-pain.surge.sh/',
     githubUrl: '',
   },
@@ -23,7 +23,7 @@ export default [
   {
     id: 4,
     name: 'A tool to make your poker ranges',
-    description: 'I\'m on it actually, not done yet ...',
+    description: 'I\'m on it actually, not done yet.',
     websiteUrl: '',
     githubUrl: '',
   },

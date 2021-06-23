@@ -17,7 +17,7 @@
     white-space:unset;
     opacity: 0;
     &--modifier {
-      animation: slideShow 2s 300ms forwards;
+      animation: slideShow .5s 300ms forwards;
     }
     &-ref {
       position: absolute;
@@ -38,7 +38,7 @@
     opacity: 0;
     // margin-left: .1em;
     &--modifier {
-      animation: slideShow 2s 300ms forwards;
+      animation: slideShow .5s 300ms forwards;
     }
     &-ref {
       position: absolute;

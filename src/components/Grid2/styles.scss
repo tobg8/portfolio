@@ -43,6 +43,8 @@
     opacity: 0;
     width: 90%;
     line-height: 1.8;
+    font-weight: bold;
+    text-align: center;
     &--modifier {
       animation: slideShow 1s 200ms forwards;
       line-height: 1.8;
@@ -118,7 +120,7 @@
 @media screen and (max-width: 400px) {
   .grid2 {
     &__text {
-      font-size: 1em;
+      font-size: .9em;
     }
   }
 }

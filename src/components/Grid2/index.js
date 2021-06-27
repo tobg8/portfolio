@@ -44,13 +44,13 @@ const Grid2 = ({
       <div className="grid2__text-container">
         <div style={{ position: 'absolute', top: '-50px' }} ref={aboutRef} />
         <p className={inView ? 'grid2__text grid2__text--modifier' : 'grid2__text'}>
-          Actuellement étudiant, je travaille principalement sur du développement web.
+          Mainly working on web developmment.
           <span className="grid2__break-line" />
-          J'utilise quotidiennement JS pour travailler, front & back.
+          Daily use of Javascript (Front & Back).
           <span className="grid2__break-line" />
-          Je suis actuellement à la recherche d'une alternance début Janvier 2022.
+          Currently looking for a work-study program starting January 2022
           <span className="grid2__break-line" />
-          Contactez-moi !
+          Contact me !
         </p>
         <div ref={textRef} />
       </div>

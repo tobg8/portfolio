@@ -49,20 +49,18 @@
   }
   &__infos-credits {
     text-transform: uppercase;
-    color: black;
     opacity: 0;
     min-width: 50px;
     position: relative;
     padding: .4em;
-    background-color: black;
-    color: white;
+    border-bottom: 1px solid black;
+    color: black;
     letter-spacing: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
     &--modifier {
       animation: slideShow .5s 300ms forwards;
-      background: linear-gradient(90deg, black 35%, rgba( 0, 0, 0, 0.6) 75%);
     }
   }
   &__techno {

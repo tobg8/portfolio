@@ -1,5 +1,5 @@
 import React, {
-  useRef, Suspense, lazy,
+  useRef, Suspense, lazy, useState, useEffect,
 } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './styles.scss';
@@ -15,6 +15,7 @@ const Page = lazy(() => import('../Page'));
 const Grid1 = lazy(() => import('../Grid1'));
 const Grid2 = lazy(() => import('../Grid2'));
 const Grid3 = lazy(() => import('../Grid3'));
+const ProgressBar = lazy(() => import('../ProgressBar'));
 
 const App = () => {
   const aboutRef = useRef(null);
@@ -28,10 +29,30 @@ const App = () => {
   const creditsRef = useRef(null);
   const scrollCredits = () => creditsRef.current.scrollIntoView({ behavior: 'smooth' });
 
+  const [progress, setProgress] = useState(0);
+
+  const scrollProgress = () => {
+    const scrollPx = document.documentElement.scrollTop;
+    const windowHeightPx = document.documentElement.scrollHeight
+    - document.documentElement.clientHeight;
+    const scrolled = `${scrollPx / windowHeightPx * 100}`;
+
+    setProgress(scrolled);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', scrollProgress);
+
+    return () => window.removeEventListener('scroll', scrollProgress);
+  });
+
   return (
     <div className="app">
       <Switch>
         <Route exact path="/">
+          {/* <div className="progress-container" style={progressContainerStyle}>
+            <div className="progress-bar" style={progressBarStyle} />
+          </div> */}
           <Suspense fallback={(
             <div className="app__loader-container">
               <Loader
@@ -44,6 +65,7 @@ const App = () => {
             </div>
           )}
           >
+            <ProgressBar height={progress.toString()} />
             <Page
               childrens={(
                 <Grid1
@@ -82,7 +104,6 @@ const App = () => {
           <Credits />
         </Route>
       </Switch>
-
     </div>
   );
 };

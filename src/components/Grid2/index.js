@@ -45,11 +45,11 @@ const Grid2 = ({
         <div style={{ position: 'absolute', top: '-50px' }} ref={aboutRef} />
         <p className={inView ? 'grid2__text grid2__text--modifier' : 'grid2__text'}>
           Actuellement étudiant, je travaille principalement sur du développement web.
-          <br />
+          <span className="grid2__break-line" />
           J'utilise quotidiennement JS pour travailler, front & back.
-          <br />
+          <span className="grid2__break-line" />
           Je suis actuellement à la recherche d'une alternance début Janvier 2022.
-          <br />
+          <span className="grid2__break-line" />
           Contactez-moi !
         </p>
         <div ref={textRef} />

@@ -144,10 +144,10 @@
   }
   &__finger {
     border: 2px solid black;
-    width: 80%;
+    width: 70%;
     height: 10%;
     border-radius: 30px;
-    margin-left: .7em;
+    margin-left: 2.8em;
     margin-bottom: .5em;
   }
   &__phrase {
@@ -313,6 +313,17 @@
     &__dw-button {
       padding: .8em;
       font-size: .8em;
+    }
+    &__finger {
+      margin-left: 2.5em;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .grid1 {
+    &__finger {
+      margin-left: 2.2em;
     }
   }
 }

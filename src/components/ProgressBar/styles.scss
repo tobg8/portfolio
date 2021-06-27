@@ -3,7 +3,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   height: 100vw;
   position: fixed;
-  top: 20%;
+  top: 10%;
   left: 10px;
   width: 5px;
   &__bar {
@@ -13,30 +13,21 @@
   }
 }
 
-@media screen and (max-width: 400px) {
-  .container {
-    top: 12%;
-  }
-}
-
 
 @media screen and (max-width: 350px) {
   .container {
-    top: 12%;
     height: 90vw;
   }
 }
 
 @media screen and (min-width: 750px) {
   .container {
-    top: 12%;
     height: 70vw;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .container {
-    top: 10%;
     height: 55vh;
     width: 10px;
     left: 100px;

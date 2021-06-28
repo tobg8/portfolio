@@ -42,7 +42,7 @@ const Footer = ({
       </div>
       <div className="footer__infos-container">
         <div className="footer__name-ref" ref={textRef} />
-        <p className={inView ? 'footer__infos-name footer__infos-name--modifier' : 'footer__infos-name'}>Theo Beloeil Guia</p>
+        <p className={inView ? 'footer__infos-name footer__infos-name--modifier' : 'footer__infos-name'}>theo.beloeil.pro@gmail.com</p>
         <div className="footer__credits-ref" ref={workReference} />
         <Link className={isSeen ? 'footer__infos-credits footer__infos-credits--modifier' : 'footer__infos-credits'} to="/credits">Credits</Link>
         <div className="footer__credits-ref" ref={creditsRef} />

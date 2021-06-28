@@ -6,6 +6,7 @@ import Header from 'src/components/Header';
 import profile from 'src/assets/images/profile.jpg';
 import useRefHook from 'src/hooks/useRefHook';
 import textHook from 'src/hooks/textHook';
+import workHeaderHook from 'src/hooks/workHeaderHook';
 import instagram from 'src/assets/images/instagram.svg';
 import twitter from 'src/assets/images/twitter.svg';
 import linkedin from 'src/assets/images/linkedin.svg';
@@ -17,6 +18,12 @@ const Grid2 = ({
   scrollCredits,
 }) => {
   const [circleRef, isVisible] = useRefHook({
+    root: null,
+    rootMargin: '0px',
+    threshold: 1.0,
+  });
+
+  const [isSeen, setIsSeen] = workHeaderHook({
     root: null,
     rootMargin: '0px',
     threshold: 1.0,
@@ -57,9 +64,10 @@ const Grid2 = ({
       <div className="grid2__img-container">
         <img className="grid2__img" src={profile} alt="it's me" preconnect="true" width="600" height="400" />
       </div>
-      <div className="grid2__ref" ref={circleRef}>
+      <div className="grid2__ref" ref={isSeen}>
+        <div className="grid2__ref" style={{ display: 'none' }} ref={circleRef} />
         <a
-          className={isVisible ? 'grid2__social grid2__social--modifier1' : 'grid2__social'}
+          className={setIsSeen ? 'grid2__social grid2__social--modifier1' : 'grid2__social'}
           href="https://www.instagram.com/tobg__/"
           target="_blank"
           rel="noopener noreferrer"
@@ -68,7 +76,7 @@ const Grid2 = ({
           <img className="grid2__social--img" src={instagram} alt="instagram icon" width="600" height="400" />
         </a>
         <a
-          className={isVisible ? 'grid2__social grid2__social--modifier2' : 'grid2__social'}
+          className={setIsSeen ? 'grid2__social grid2__social--modifier2' : 'grid2__social'}
           href="https://twitter.com/tobg_"
           target="_blank"
           rel="noopener noreferrer"
@@ -77,7 +85,7 @@ const Grid2 = ({
           <img className="grid2__social--img" src={twitter} alt="instagram icon" width="600" height="400" />
         </a>
         <a
-          className={isVisible ? 'grid2__social grid2__social--modifier3' : 'grid2__social'}
+          className={setIsSeen ? 'grid2__social grid2__social--modifier3' : 'grid2__social'}
           href="https://www.linkedin.com/in/tobg-2021/"
           target="_blank"
           rel="noopener noreferrer"

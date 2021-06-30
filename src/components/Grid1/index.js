@@ -86,8 +86,8 @@ const Grid1 = ({
         <section className="grid1__container">
           <div className="grid1__finger" />
           <p className="grid1__phrase grid1__phrase--1">I'm a fullstack JS developper</p>
-          <p className="grid1__phrase grid1__phrase--2">Actually improving skills at Epitech Paris</p>
-          <p className="grid1__phrase grid1__phrase--3">Wish you an enjoyable trip</p>
+          <p className="grid1__phrase grid1__phrase--2">Currently improving skills at Epitech Paris</p>
+          <p className="grid1__phrase grid1__phrase--3">Wishing you an enjoyable visit</p>
           <a type="button" className="grid1__dw-button" href={`${process.env.REACT_APP_BACK_URL}/pdf`} target="_blank" rel="noreferrer">Download CV</a>
         </section>
       </section>

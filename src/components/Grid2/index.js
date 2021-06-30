@@ -51,7 +51,7 @@ const Grid2 = ({
       <div className="grid2__text-container">
         <div style={{ position: 'absolute', top: '-50px' }} ref={aboutRef} />
         <p className={inView ? 'grid2__text grid2__text--modifier' : 'grid2__text'}>
-          Mainly working on web developmment.
+          Mainly working on web development.
           <span className="grid2__break-line" />
           Daily use of Javascript (Front & Back).
           <span className="grid2__break-line" />

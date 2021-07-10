@@ -6,7 +6,7 @@
   height: 10.8%;
   transform: translateY(0px);
   z-index: 2;
-  background-color: #6C9A8B;
+  background-color: black;
   display: flex;
   // border-bottom: 2px solid black;
   animation: slide 1.5s ease forwards;
@@ -26,12 +26,12 @@
   }
   &__mid {
     width: 50%;
-    border-left: 2px solid black;
+    border-left: 2px solid white;
   }
   &__hamburger {
     width: 20%;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
     display: flex;
     justify-content: center;
     &--modifier {

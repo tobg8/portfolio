@@ -8,6 +8,9 @@
   justify-content: space-between;
   position: relative;
   z-index: 1;
+  &:hover {
+    background-color: rgba(81,69,77,0.3)
+  }
   &__description {
     font-weight: normal;
     font-size: .9em;
@@ -170,6 +173,10 @@
     }
     &__learn-more {
       font-size: 1.1em;
+    }
+    &-img {
+    max-width: 400px;
+    max-height: 500px;
     }
   }
 }

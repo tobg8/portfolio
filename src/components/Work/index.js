@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import workHeaderHook from 'src/hooks/workHeaderHook';
 import textHook from 'src/hooks/textHook';
 import linkRefHook from 'src/hooks/linkRefHook';
 import github from 'src/assets/images/logo-github.svg';
+import MouseTooltip from 'react-sticky-mouse-tooltip';
 import './styles.scss';
 
 const Work = ({
@@ -12,6 +13,7 @@ const Work = ({
   description,
   githubUrl,
   websiteUrl,
+  image,
 }) => {
   const [workReference, isSeen] = workHeaderHook({
     root: null,
@@ -38,9 +40,24 @@ const Work = ({
     return false;
   };
 
+  const [mouseImage, setMouseImage] = useState(false);
+
+  const toggleMouseImage = () => {
+    setMouseImage(!mouseImage);
+  };
+
   return (
-    <div className={evenOrOdd(id) ? 'work work--modifier' : 'work'}>
+    <div className={evenOrOdd(id) ? 'work work--modifier' : 'work'} onMouseEnter={toggleMouseImage} onMouseLeave={toggleMouseImage}>
       <section className="work__infos">
+        {image && (
+          <MouseTooltip
+            visible={mouseImage}
+            offsetX={30}
+            offsetY={30}
+          >
+            <img src={image} className="work__tooltip-img" alt={`Preview of ${name} website`} width="400px" height="300px" />
+          </MouseTooltip>
+        )}
         <p className={isSeen ? 'work__title work__title--modifier' : 'work__title'}>{name}</p>
         <p className={inView ? 'work__description work__description--modifier' : 'work__description'}>{description}</p>
       </section>
@@ -65,7 +82,7 @@ const Work = ({
             rel="noopener noreferrer"
             aria-label="linkedin page"
           >
-            <p className="work__learn-more">More about {name}</p>
+            <p className="work__learn-more">Visit {name}</p>
             <img src="https://static.tildacdn.com/tild3336-3931-4333-b931-633866326462/button.svg" alt="arrow icon" width="20" height="20" />
           </a>
         )}
@@ -81,6 +98,11 @@ Work.propTypes = {
   description: PropTypes.string.isRequired,
   githubUrl: PropTypes.string.isRequired,
   websiteUrl: PropTypes.string.isRequired,
+  image: PropTypes.string,
+};
+
+Work.defaultProps = {
+  image: null,
 };
 
 export default Work;

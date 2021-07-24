@@ -55,9 +55,8 @@ const Grid2 = ({
           <span className="grid2__break-line" />
           Daily use of Javascript (Front & Back).
           <span className="grid2__break-line" />
-          Currently looking for a work-study program starting January 2022
+          Currently looking for a work-study program starting January 2022.
           <span className="grid2__break-line" />
-          Contact me !
         </p>
         <div ref={textRef} />
       </div>

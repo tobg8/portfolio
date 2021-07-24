@@ -46,7 +46,7 @@
     font-weight: bold;
     text-align: center;
     &--modifier {
-      animation: slideShow 1s 200ms forwards;
+      animation: slideShow 1s 100ms forwards;
       line-height: 1.8;
     }
   }
@@ -173,6 +173,8 @@
     }
     &__text {
       font-size: 1.9em;
+      margin-left: .5em;
+      text-align: left;
     }
   }
 

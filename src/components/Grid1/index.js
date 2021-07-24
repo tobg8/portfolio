@@ -20,6 +20,14 @@ const Grid1 = ({
 }) => {
   const [navbar, setNavbar] = useState(false);
 
+  const [showSite, setShowSite] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowSite(false);
+    }, 0);
+  }, []);
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -46,6 +54,7 @@ const Grid1 = ({
     <div className="grid1">
       <Suspense fallback={<div />}>
         <Header navbar={navbar} setNavbar={setNavbar} modifier="modifier" inView={inView} className="false" scroll={scroll} scrollWork={scrollWork} scrollCredits={scrollCredits} />
+        <div className={showSite ? 'grid1__screen' : 'grid1__screen--off'} />
       </Suspense>
       <div className="grid1__ellipse" />
       <div className="grid1__name">

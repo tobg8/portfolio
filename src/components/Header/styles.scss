@@ -12,7 +12,7 @@
   animation: slide 1.5s ease forwards;
 
   &--close {
-    display: none;
+    animation: slideBack 3s ease forwards;
   }
   &--false {
     transform: translateY(0px);
@@ -40,20 +40,23 @@
     &-img {
       width: 50%;
       max-height: 80px;
+      &--modifier {
+        animation: rotate 1s ease forwards;
+      }
     }
   }
 }
 
 .header--true {
-  background-color:rgb(123, 86, 124);
+  background-color:black;
   transform: translateY(-100px);
-  animation: slide .5s ease forwards;
+  animation: slide 3.2s ease forwards;
 }
 
 .header--off {
-  background-color: #ddbea9;
+  background-color:black;
   transform: translateY(0px);
-  animation: slideBack .5s ease forwards;
+  animation: slideBack 3.2s ease forwards;
 }
 
 @keyframes slide {
@@ -65,14 +68,22 @@
   }
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
 @keyframes slideBack {
   50% {
     transform: translateY(-100px);
 
   }
   100% {
-    z-index: 0;
-    opacity: 0;
+    transform: translateY(-100px);
   }
 }
 

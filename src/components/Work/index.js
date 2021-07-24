@@ -21,6 +21,7 @@ const Work = ({
     threshold: 1.0,
   });
 
+
   const [textRef, inView] = textHook({
     root: null,
     rootMargin: '0px',
@@ -49,7 +50,7 @@ const Work = ({
   return (
     <div className={evenOrOdd(id) ? 'work work--modifier' : 'work'} onMouseEnter={toggleMouseImage} onMouseLeave={toggleMouseImage}>
       <section className="work__infos">
-        {image && (
+        {image && window.innerWidth > 800 && (
           <MouseTooltip
             visible={mouseImage}
             offsetX={30}

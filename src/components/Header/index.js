@@ -18,7 +18,7 @@ const Header = ({
     <div className="header__in-out" />
     <div className="header__mid" />
     <div className={`header__hamburger header__hamburger--${modifier}`}>
-      <img className="header__hamburger-img" src={hamburger1} alt="" onClick={() => setNavbar(true)} width="100" height="100" />
+      <img className={inView ? 'header__hamburger-img header__hamburger-img--modifier' : 'header__hamburger-img'} src={hamburger1} alt="" onClick={() => setNavbar(true)} width="100" height="100" />
     </div>
     <div className="header__in-out" />
     <HiddenMenu

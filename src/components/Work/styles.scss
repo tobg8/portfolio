@@ -174,9 +174,10 @@
     &__learn-more {
       font-size: 1.1em;
     }
-    &-img {
-    max-width: 400px;
-    max-height: 500px;
+    &__tooltip-img {
+    aspect-ratio: 2 / 1;
+    max-width: 300px;
+    max-height: 200px;
     }
   }
 }

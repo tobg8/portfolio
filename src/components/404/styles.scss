@@ -1,0 +1,24 @@
+.grid-404 {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  z-index: 1;
+  position: relative;
+  &__cell {
+    border-bottom:- 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6em;
+    user-select: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid-404 {
+    &__cell {
+      font-size: 10em;
+    }
+  }
+}

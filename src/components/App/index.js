@@ -6,6 +6,7 @@ import './styles.scss';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import Loader from 'react-loader-spinner';
 import Credits from 'src/components/Credits';
+import NotFound from 'src/components/404';
 // import Page from 'src/components/Page';
 // import Grid1 from 'src/components/Grid1';
 // import Grid2 from 'src/components/Grid2';
@@ -103,6 +104,7 @@ const App = () => {
         <Route exact path="/credits">
           <Credits />
         </Route>
+        <Route component={NotFound} />
       </Switch>
     </div>
   );

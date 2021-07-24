@@ -1,0 +1,27 @@
+.home-button {
+  background-color: black;
+  min-height: 40%;
+  min-width: 40%;
+  margin: 0 .2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__button {
+    font-size: .3em;
+    color: white;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home-button {
+    margin: 0;
+    &__button {
+      font-size: .3em;
+    }
+  }
+}

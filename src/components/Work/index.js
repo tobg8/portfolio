@@ -21,7 +21,6 @@ const Work = ({
     threshold: 1.0,
   });
 
-
   const [textRef, inView] = textHook({
     root: null,
     rootMargin: '0px',
@@ -56,7 +55,7 @@ const Work = ({
             offsetX={30}
             offsetY={30}
           >
-            <img src={image} className="work__tooltip-img" alt={`Preview of ${name} website`} width="400px" height="300px" />
+            <img src={image} className="work__tooltip-img" alt={`Preview of ${name} website`} />
           </MouseTooltip>
         )}
         <p className={isSeen ? 'work__title work__title--modifier' : 'work__title'}>{name}</p>

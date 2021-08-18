@@ -61,7 +61,7 @@ const Grid2 = ({
         <div ref={textRef} />
       </div>
       <div className="grid2__img-container">
-        <img className="grid2__img" src={profile} alt="it's me" preconnect="true" width="600" height="400" />
+        <img className={setIsSeen ? 'grid2__img' : 'grid2__img--off'} src={profile} alt="it's me" preconnect="true" width="600" height="400" />
       </div>
       <div className="grid2__ref" ref={isSeen}>
         <div className="grid2__ref" style={{ display: 'none' }} ref={circleRef} />

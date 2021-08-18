@@ -68,6 +68,11 @@
     width: 100%;
     max-height: 100%;
     object-fit: cover;
+    opacity: 0;
+    animation: appear .1s forwards;
+    &--off {
+      display: none;
+    }
   }
   &__social {
     opacity: 0;
@@ -178,4 +183,14 @@
     }
   }
 
+}
+
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
